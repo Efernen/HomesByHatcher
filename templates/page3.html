@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDK</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='image.jpg') }}" alt="Website Banner" class="banner-image">
+    </header>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('page1') }}">Our Services</a></li>
+        <li><a href="{{ url_for('page2') }}">Portfolio</a></li>
+        <li><a href="{{ url_for('page4') }}">Bee Keeping</a></li>
+        <li><a href="{{ url_for('page5') }}">About Us</a></li>
+      </ul>
+    </nav>
+    <section class="photo-gallery">
+        <div class="photo-column">
+          <div class="photo-box">
+            <img src="image1.jpg" alt="Description 1">
+            <p class="description">This is the first image description.</p>
+          </div>
+          <div class="photo-box">
+            <img src="image2.jpg" alt="Description 2">
+            <p class="description">This is the second image description.</p>
+          </div>
+        </div>
+      
+        <div class="photo-column">
+          <div class="photo-box">
+            <img src="image3.jpg" alt="Description 3">
+            <p class="description">This is the third image description.</p>
+          </div>
+          <div class="photo-box">
+            <img src="image4.jpg" alt="Description 4">
+            <p class="description">This is the fourth image description.</p>
+          </div>
+        </div>
+      </section>
+      
+</body>
+</html>

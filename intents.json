@@ -1,0 +1,110 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": ["Hi", "Hello", "Hey", "Good morning", "Good afternoon", "Good evening"],
+        "responses": ["Hello! Welcome to our construction services.", "Hi there! How can we assist you with your project?", "Hello! We're here to help with your construction needs."]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": ["Bye", "See you later", "Goodbye", "Take care"],
+        "responses": ["Goodbye! Feel free to reach out anytime.", "Thanks for visiting! Have a great day.", "See you later! We're here if you need us."]
+      },
+      {
+        "tag": "thanks",
+        "patterns": ["Thanks", "Thank you", "That's helpful", "I appreciate it"],
+        "responses": ["You're welcome! Happy to help with your project.", "Glad we could assist!", "Anytime! Let us know if there's more we can do."]
+      },
+      {
+        "tag": "company_name",
+        "patterns": ["What is your company name?", "Who are you?", "Can you tell me your name?", "What is the name of this construction company?"],
+        "responses": ["We're [Your Company Name], a trusted construction company specializing in residential and commercial projects."]
+      },
+      {
+        "tag": "pricing",
+        "patterns": ["What are your prices?", "How much do lawn services cost?", "Can I get a pricing estimate?", "What is the cost of lawn care?"],
+        "responses": ["Our pricing depends on the size of your lawn and the specific services you need. Contact us with your lawn details, and we’ll provide a free estimate!"]
+      },
+      {
+        "tag": "organic_options",
+        "patterns": ["Do you offer organic lawn care?", "Do you use organic products?", "Are your services eco-friendly?", "Do you have natural options?"],
+        "responses": ["Yes, we offer organic lawn care options and use eco-friendly products to keep your lawn healthy while protecting the environment."]
+      },
+      {
+        "tag": "services",
+        "patterns": ["What services do you offer?", "Can you tell me about your services?", "What kind of construction services do you provide?", "Do you offer remodeling services?"],
+        "responses": ["We offer a range of services, including general contracting, remodeling, new construction, and site development. Let us know which one interests you!"]
+      },
+      {
+        "tag": "portfolio",
+        "patterns": ["Can I see your past projects?", "Do you have a portfolio?", "Show me your completed projects", "Where can I see examples of your work?"],
+        "responses": ["You can view our portfolio on the Portfolio page to see our recent projects and accomplishments. We're proud of our work!"]
+      },
+      {
+        "tag": "sustainability",
+        "patterns": ["Do you offer sustainable construction?", "Are you a green builder?", "Do you do eco-friendly construction?", "Tell me about green building options."],
+        "responses": ["Yes, we offer sustainable construction options and focus on eco-friendly building practices. We’re committed to green building solutions!"]
+      },
+      {
+        "tag": "community_involvement",
+        "patterns": ["Are you involved in the community?", "What community projects do you support?", "Tell me about your community involvement", "Do you give back to the community?"],
+        "responses": ["We're passionate about giving back! We support various community projects, which you can learn about on our Community Giveback page."]
+      },
+      {
+        "tag": "estimate",
+        "patterns": ["Can I get a construction estimate?", "How much will my project cost?", "Do you provide project quotes?", "Can I get an estimate?"],
+        "responses": ["We'd be happy to provide an estimate! Please contact us with your project details, and we'll prepare a customized quote for you."]
+      },
+      {
+        "tag": "location",
+        "patterns": ["Where are you located?", "What is your office location?", "Where is your company based?", "Are you near me?"],
+        "responses": ["Our office is located at [Your Location]. We proudly serve the surrounding areas, and we're here to discuss your project in person or online!"]
+      },
+      {
+        "tag": "frequency",
+        "patterns": ["How often should I mow my lawn?", "What is the best lawn care schedule?", "How frequently should I get lawn service?", "How often do you recommend care?"],
+        "responses": ["For optimal results, we typically recommend weekly or bi-weekly mowing during the growing season. Our team can help create a custom care plan for you."]
+      },
+      {
+        "tag": "lawn_problems",
+        "patterns": ["I have brown spots on my lawn", "My lawn has weeds", "How can I fix patchy grass?", "Why is my lawn turning yellow?"],
+        "responses": ["Our team specializes in lawn repair and treatments for issues like brown spots, weeds, and patchy grass. Contact us to diagnose and treat the problem!"]
+      },
+      {
+        "tag": "certifications",
+        "patterns": ["Are you licensed?", "Do you have certifications?", "Are you insured?", "Is your company licensed and insured?"],
+        "responses": ["Yes, we are a fully licensed and insured lawn care company. We prioritize safety, quality, and customer satisfaction."]
+      },
+      {
+        "tag": "scheduling",
+        "patterns": ["Can I schedule a consultation?", "How can I book an appointment?", "Can I meet with someone?", "How do I schedule a consultation?"],
+        "responses": ["We’d love to discuss your project! You can schedule a consultation by calling us or filling out the contact form on our website."]
+      },
+      {
+        "tag": "certifications",
+        "patterns": ["Are you licensed?", "Do you have insurance?", "Are you certified?", "Is your company licensed and insured?"],
+        "responses": ["Yes, we are a fully licensed and insured construction company. We adhere to all industry standards to ensure safety and quality."]
+      },
+      {
+        "tag": "beekeeping_services",
+        "patterns": ["Do you offer beekeeping services?", "Can you help with beekeeping?", "What beekeeping services do you provide?", "Do you offer bee relocation?"],
+        "responses": ["Yes! We provide beekeeping services including hive installation, hive maintenance, and bee relocation. We’re committed to supporting healthy bee populations."]
+      },
+      {
+        "tag": "bee_problems",
+        "patterns": ["I have bees in my yard", "There is a bee swarm", "Can you remove a bee hive?", "What should I do about bees in my yard?"],
+        "responses": ["If you have a bee hive or swarm in your yard, we offer safe bee relocation services. Reach out to us, and we’ll relocate the bees to a safer environment."]
+      },
+      {
+        "tag": "honey_sales",
+        "patterns": ["Do you sell honey?", "Where can I buy your honey?", "Can I buy honey from you?", "Do you sell local honey?"],
+        "responses": ["Yes, we sell our locally-produced honey! You can buy it directly from us or check our website for availability. Our honey is raw, unfiltered, and full of natural goodness."]
+      },
+      {
+        "tag": "bee_friendly_practices",
+        "patterns": ["Are your lawn care practices bee-friendly?", "Do you use bee-safe products?", "Is your lawn care safe for bees?", "What do you do to protect bees?"],
+        "responses": ["We use bee-friendly, eco-conscious practices and products in our lawn care to ensure the safety of pollinators like bees. Supporting healthy bee populations is a priority for us!"]
+      }
+    ]
+  }
+  
