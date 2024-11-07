@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script defer>
+        function toggleChatbox() {
+            console.log("toggleChatbox called"); // Debugging log
+            const chatbox = document.getElementById("chatbox-container");
+            const messages = document.getElementById("messages");
+            const userInput = document.getElementById("user-input-container");
+
+            if (chatbox.classList.contains("minimized")) {
+                console.log("Expanding chatbox"); // Debugging log
+                chatbox.classList.remove("minimized");
+                messages.classList.remove("hidden");
+                userInput.classList.remove("hidden");
+            } else {
+                chatbox.classList.add("minimized");
+                messages.classList.add("hidden");
+                userInput.classList.add("hidden");
+            }
+        }
+        function showChatbox() {
+    const chatbox = document.getElementById("chatbox-container");
+    chatbox.style.display = "block";
+    console.log("Chatbox should be visible now.");
+}
+
+// Run this function directly after the page loads to confirm visibility
+document.addEventListener("DOMContentLoaded", showChatbox);
+
+        function handleKeyPress(event) {
+            if (event.key === "Enter") sendMessage();
+        }
+
+        function addMessage(text, sender) {
+            const messageContainer = document.createElement("div");
+            messageContainer.classList.add("message", sender);
+            messageContainer.innerText = text;
+            document.getElementById("messages").appendChild(messageContainer);
+            document.getElementById("messages").scrollTop = document.getElementById("messages").scrollHeight;
+        }
+
+        async function sendMessage() {
+            const userInput = document.getElementById("user-input").value;
+            if (userInput.trim() === "") return;
+
+            addMessage(userInput, "user");
+            document.getElementById("user-input").value = "";
+
+            try {
+                const response = await fetch("/chat", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ message: userInput })
+                });
+                const data = await response.json();
+                addMessage(data.response, "assistant");
+            } catch (error) {
+                console.error("Error:", error);
+                addMessage("Sorry, I'm having trouble connecting.", "assistant");
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Existing content -->
+    <header>
+        <img src="{{ url_for('static', filename='image.jpg') }}" alt="Website Banner" class="banner-image">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('page1') }}">Our Services</a></li>
+            <li><a href="{{ url_for('page2') }}">Portfolio</a></li>
+            <li><a href="{{ url_for('page3') }}">Community Giveback</a></li>
+            <li><a href="{{ url_for('page4') }}">Bee Keeping</a></li>
+            <li><a href="{{ url_for('page5') }}">About Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content and other sections -->
+    <section>
+        <h1>Welcome to Our Website!</h1>
+        <p>Explore the different pages and learn more about us.</p>
+    </section>
+
+    <section class="photo-gallery">
+        <!-- Gallery content here -->
+    </section>      
+
+    <!-- Contact Us Form in Footer -->
+    <footer>
+    <section id="contact-us">
+        <h2>Contact Us</h2>
+        <p>We’d love to hear from you. Please fill out the form below and we’ll get back to you soon!</p>
+        <form id="contact-form" action="your-backend-endpoint" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</footer>
+
+    <!-- Virtual Assistant Chatbox -->
+    <div id="chatbox-container" class="minimized">
+        <div id="chatbox-header">
+            <img src="{{ url_for('static', filename='avatar.jpg') }}" alt="Assistant Avatar" id="assistant-avatar">
+            <span>Chat with Us!</span>
+            <button onclick="toggleChatbox()" id="minimize-btn">_</button>
+        </div>
+        <div id="messages" class="hidden"></div>
+        <div id="user-input-container" class="hidden">
+            <input type="text" id="user-input" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+</body>
+</html>
