@@ -1,0 +1,217 @@
+/* General Page Styling */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #5B2B20;               /* Dark brown for text */
+  background-color: #C3B8A6;    /* Light beige/taupe background color */
+}
+
+html, body, header {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background-color: #C3B8A6; /* Example background color */
+}
+
+.banner-image {
+  display: block;
+  width: 25%;      /* Adjust as needed */
+  height: auto;     /* Maintain aspect ratio */
+  border: none;     /* Remove any default border */
+}
+.bee1 {
+  display: block;
+  width: 25%;      /* Adjust as needed */
+  height: auto;     /* Maintain aspect ratio */
+  border: none;     /* Remove any default border */
+}
+
+/* Navigation Styling */
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 10px;
+  justify-content: center;
+  background-color: #5B2B20; /* Dark brown background for navigation */
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #C3B8A6;              /* Light beige text color for nav links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #A65328;              /* Terracotta accent on hover */
+}
+
+/* Main Content */
+section {
+  padding: 40px 20px;
+  background-color: #f4f0e8;    /* Light neutral to keep content readable */
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+/* Headings */
+h1, h2 {
+  color: #5B2B20;               /* Dark brown color for headings */
+  font-family: 'Georgia', serif; /* Classic font for a refined look */
+}
+
+p {
+  color: #5B2B20;               /* Dark brown color for paragraph text */
+}
+
+/* Buttons */
+button {
+  background-color: #A65328;    /* Terracotta button color */
+  color: #fff;                  /* White text for contrast */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #8A4721;    /* Darker terracotta on hover */
+}
+
+/* Footer */
+footer {
+  background-color: #5B2B20;    /* Dark brown footer background */
+  color: #C3B8A6;               /* Light beige text for contrast */
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/* Contact Form in Footer */
+#contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #f4f0e8;    /* Light neutral form background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-size: 1em;
+  color: #5B2B20;              /* Dark brown for labels */
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #C3B8A6;   /* Beige border for inputs */
+  border-radius: 4px;
+  font-size: 1em;
+  background-color: #fff;
+  color: #5B2B20;
+}
+
+#contact-form button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #A65328;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#contact-form button[type="submit"]:hover {
+  background-color: #8A4721;
+}
+
+#chatbox-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex; /* Ensure chatbox is set to display */
+  flex-direction: column;
+}
+
+.hidden {
+  display: none; /* Only apply to specific elements when needed */
+}
+
+#chatbox-container.minimized {
+  height: 50px; /* When minimized, show only the header */
+  overflow: hidden;
+}
+
+#chatbox-header {
+  background-color: #5B2B20;
+  color: #C3B8A6;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#assistant-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+#minimize-btn {
+  background: none;
+  border: none;
+  color: #C3B8A6;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#messages {
+  padding: 10px;
+  height: 200px;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+.user {
+  text-align: right;
+}
+
+.assistant {
+  text-align: left;
+  color: #5B2B20;
+}
+
+#user-input-container {
+  display: flex;
+  border-top: 1px solid #ddd;
+  padding: 5px;
+  background-color: #f9f9f9;
+}
